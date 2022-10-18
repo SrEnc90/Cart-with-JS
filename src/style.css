@@ -8,10 +8,16 @@ body {
     font-family: sans-serif;    
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
 .navbar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     background-color: #242423;
     color: white;
     padding: 25px 60px;
@@ -52,6 +58,7 @@ body {
     grid-template-columns: repeat(4,223px);
     gap: 30px;
     justify-content: center;
+    margin-bottom: 60px;
 }
 
 @media (max-width: 950px) {
@@ -69,6 +76,11 @@ body {
 .item {
     border: 2px solid #242423;
     border-radius: 5px;    
+}
+
+.item img {
+    width: 100%;
+    border-radius: 4px 4px 0 0;
 }
 
 /**
@@ -113,4 +125,71 @@ body {
 */
 i {
     cursor: pointer;
+}
+
+/**
+* ? ESTILOS PARA EL CART.HTML
+**/
+
+.text-center {
+   text-align: center;
+   margin-bottom: 20px;
+}
+
+.homeBtn,
+.checkout,
+.removeAll {
+    background-color: #242423;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.checkout {
+    background-color: green;
+}
+
+.removeAll {
+    background-color: red;
+}
+
+.fa-x {
+    color: red;
+    font-weight: bolder;
+}
+
+.shopping-cart {
+    display: grid;
+    grid-template-columns: repeat(1,320px);
+    justify-content: center;
+    gap: 15px;
+}
+
+.cart-item {
+    border: 2px solid #242423;
+    border-radius: 10px;
+    display: flex;
+}
+
+.title-price-x {
+    width: 195px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title-price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-item-price {
+    background-color: #242423;
+    color: white;
+    border-radius: 8px;
+    padding: 3px 6px;
 }

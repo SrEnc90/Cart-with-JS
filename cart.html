@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +8,6 @@
 
     <link rel="stylesheet" href="./src/style.css">
     <script src="https://kit.fontawesome.com/ed33dee0c2.js" crossorigin="anonymous"></script>
-
 </head>
 <body>
     <div class="navbar">
@@ -22,13 +21,10 @@
             </div>
         </a>
     </div>
-    <!--emmet: 
-        .shop#shop + tab = <div class="shop" id="shop"></div> 
-        .item*4 (*4 = se va a replicar 4 veces)-->
-        <div class="shop" id="shop">            
-        </div>
+    <!--Con el id apuntamos al file .js y con la class apuntamos al file .css-->
+    <div id="label" class="text-center"></div>
+    <div id="shopping-cart" class="shopping-cart"></div>
 </body>
     <script src="src/data.js"></script>
-    <script src="src/main.js"></script>
-
+    <script src="src/cart.js"></script>
 </html>

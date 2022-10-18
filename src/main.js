@@ -1,46 +1,15 @@
 let shop = document.getElementById('shop')
 
-// almacenando objetos en el array
-let shopItemsData = [
-    {
-        id: "shop01",
-        name: "Camisa Casual",
-        price: 45,
-        description: "Lorem ipsum, dolor sit amet consectetur adipisicing.",
-        img: "images/img-1.jpg"
-    }, 
-    {
-        id: "shop02",
-        name: "Camisa Oficina",
-        price: 100,
-        description: "Lorem ipsum, dolor sit amet consectetur adipisicing.",
-        img: "images/img-2.jpg"
-    }, 
-    {
-        id: "shop03",
-        name: "Camiseta",
-        price: 25,
-        description: "Lorem ipsum, dolor sit amet consectetur adipisicing.",
-        img: "images/img-3.jpg"
-    }, 
-    {
-        id: "shop04",
-        name: "Terno Completo",
-        price: 250,
-        description: "Lorem ipsum, dolor sit amet consectetur adipisicing.",
-        img: "images/img-4.jpg"
-    }]
-
     //parse convierte un objeto json a javascript
     // si data está vacío entonces retorna un array vacío 
-    let basket = JSON.parse(localStorage.getItem("data")) || []
+    let basket = JSON.parse(localStorage.getItem("data")) || [] // el jsnon.parse(localstorage) esta jalando la data desde el localstorage 
 
 let generateShop = () => {
     //map es un método del array que te permite mapear los key-value del array
     return ( shop.innerHTML = shopItemsData.map((x) => {
         //con esto ya no necesito poner ${x.name} solamente necesito poner ${name} en el div de abajo
         let {id, name, price, description, img} = x 
-       let search = basket.find((x) => x.id === id) || [] // con esto recargo los datos por más que refrezque la página
+       let search = basket.find((y) => y.id === id) || [] // con esto recargo los datos por más que refrezque la página
         //por alguna razón deben estar en la misma linea la sentencia return y ` (sin salto de línea)
         return `
             <div id="product-id-${id}" class="item">
